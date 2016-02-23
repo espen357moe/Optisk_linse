@@ -6,8 +6,7 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.JComponent;
 
-public class MoveableComponent extends JComponent implements
-		MouseMotionListener {
+public class MoveableComponent extends JComponent implements MouseMotionListener {
 
 	Point offset;
 
