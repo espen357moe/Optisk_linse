@@ -5,8 +5,10 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Observable;
+import java.util.Observer;
 
-public class MoveableGlass extends MoveableComponent {
+public class MoveableGlass extends MoveableComponent implements Observer {
 
 	final float LA = 0.10f;
 	final float HA = 0.30f;
@@ -42,6 +44,12 @@ public class MoveableGlass extends MoveableComponent {
 	public void selectShape() {
 		helper.selectShape();
 		repaint();
+	}
+
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
