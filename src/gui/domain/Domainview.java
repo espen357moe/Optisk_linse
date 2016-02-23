@@ -28,5 +28,9 @@ public class Domainview extends JPanel {
 	public Dimension getTheSize() {
 		return background.getSize();
 	}
+	
+	public void newObserverWindow() {
+		glassinfront.addObserver(background);
+	}
 
 }

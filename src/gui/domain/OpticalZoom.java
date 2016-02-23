@@ -11,6 +11,8 @@ import java.util.Observer;
 
 import javax.swing.JOptionPane;
 
+import controller.WindowObservable;
+
 public class OpticalZoom extends MoveableGlass implements Observer {		
 	
 	/*Point position;
@@ -38,7 +40,8 @@ public class OpticalZoom extends MoveableGlass implements Observer {
 	
 	private Point location;
 	private final ZoomController zoomController;
-	private Rectangle rectangle = new Rectangle(0, 0, 200, 200);
+	private Rectangle rectangle = new Rectangle(0, 0, 200, 200);	
+	private WindowObservable windowObservable = new WindowObservable();
 	
 	private int resize = 50;
 	private int width = 220;
@@ -64,6 +67,10 @@ public class OpticalZoom extends MoveableGlass implements Observer {
 	private int recalculate(int q) {
 		double d = q * resize / 100;
 		return (int)Math.round(d);
+	}
+	
+	public void addObserver(Background background) {
+		windowObservable.addObserver(this);		
 	}
 
 	@Override
