@@ -7,11 +7,13 @@ import javax.swing.JOptionPane;
 
 import controller.Controller;
 import easylib.controller.ISupercontroller;
+import gui.domain.ZoomController;
 
 public class ApplicationFrame extends JFrame implements ISupercontroller {
 
 	Centerpane centerpane = null;
 	Southpane southpane = null;
+	ZoomController zoomController = null;
 
 	public ApplicationFrame() {
 		Controller.init(this);
@@ -22,7 +24,9 @@ public class ApplicationFrame extends JFrame implements ISupercontroller {
 		setJMenuBar(new MenuController());
 		setSize(centerpane.getTheSize());
 		setLocationRelativeTo(null);
-		setVisible(true);
+		setVisible(true);		
+		zoomController = new ZoomController();		
+		
 	}
 
 	public void exit() {
