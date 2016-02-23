@@ -25,7 +25,7 @@ public class ApplicationFrame extends JFrame implements ISupercontroller {
 		setSize(centerpane.getTheSize());
 		setLocationRelativeTo(null);
 		setVisible(true);		
-		zoomController = new ZoomController();		
+		zoomController = new ZoomController(this.getLocation());		
 		
 	}
 

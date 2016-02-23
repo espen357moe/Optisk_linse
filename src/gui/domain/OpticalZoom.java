@@ -3,7 +3,7 @@ package gui.domain;
 public class OpticalZoom extends MoveableGlass {
 	
 	private int zoomFactor = 0;
-	private ZoomController zoomController = new ZoomController();
+	//private ZoomController zoomController = new ZoomController();
 	
 	public void setZoomFactor(int zoomFactor) {
 		this.zoomFactor = zoomFactor;
