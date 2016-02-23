@@ -11,12 +11,12 @@ public class OpticalZoom extends MoveableGlass {
 	
 	@Override
 	public void selectGlassColor(){
-		// Overridden superclass method 
+		// "Un-implement" superclass method 
 	}
 	
 	@Override
 	public void selectShape(){
-		// Overridden superclass method
+		// "Un-implement" superclass method
 	}
 
 }
