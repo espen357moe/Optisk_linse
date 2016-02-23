@@ -13,7 +13,6 @@ public class ApplicationFrame extends JFrame implements ISupercontroller {
 
 	Centerpane centerpane = null;
 	Southpane southpane = null;
-	ZoomController zoomController = null;
 
 	public ApplicationFrame() {
 		Controller.init(this);
@@ -24,9 +23,7 @@ public class ApplicationFrame extends JFrame implements ISupercontroller {
 		setJMenuBar(new MenuController());
 		setSize(centerpane.getTheSize());
 		setLocationRelativeTo(null);
-		setVisible(true);		
-		zoomController = new ZoomController(this.getLocation());		
-		
+		setVisible(true);								
 	}
 
 	public void exit() {

@@ -12,9 +12,9 @@ public class ZoomController extends JFrame {
 	private int zoomFactor = 0;
 	private JSlider zoomFactorSlider = new JSlider(JSlider.VERTICAL);
 	
-	public ZoomController(Point mainwindowLocation) {
+	public ZoomController(Point instantiatorLocation) {
 		this.setSize(width, height);
-		this.setLocation((mainwindowLocation.x + width), (mainwindowLocation.y + height));
+		this.setLocation((instantiatorLocation.x), (instantiatorLocation.y));
 		//zoomFactorSlider.addChangeListener(new ChangeListener()); - figure out how this thing works
 		zoomFactorSlider.setMajorTickSpacing(10);
 		zoomFactorSlider.setPaintTicks(true);
@@ -22,5 +22,9 @@ public class ZoomController extends JFrame {
 		this.add(zoomFactorSlider);
 		
 		this.setVisible(true);
+	}
+
+	public int getZoomFactor() {
+		return this.zoomFactor;
 	}
 }

@@ -1,12 +1,20 @@
 package gui.domain;
 
-public class OpticalZoom extends MoveableGlass {
+import java.awt.Point;
+
+public class OpticalZoom extends MoveableGlass {		
 	
+	Point position;
+	private ZoomController zoomController;
 	private int zoomFactor = 0;
-	//private ZoomController zoomController = new ZoomController();
+	
+	public OpticalZoom() {
+		position = this.getLocation();
+		zoomController = new ZoomController(position);
+	}
 	
 	public void setZoomFactor(int zoomFactor) {
-		this.zoomFactor = zoomFactor;
+		this.zoomFactor = zoomController.getZoomFactor();
 	}
 	
 	@Override
