@@ -14,7 +14,7 @@ public class ZoomController extends JFrame {
 	
 	public ZoomController(Point instantiatorLocation) {
 		this.setSize(width, height);
-		this.setLocation((instantiatorLocation.x), (instantiatorLocation.y));
+		this.setLocation((instantiatorLocation.x + width), (instantiatorLocation.y + height));
 		//zoomFactorSlider.addChangeListener(new ChangeListener()); - figure out how this thing works
 		zoomFactorSlider.setMajorTickSpacing(10);
 		zoomFactorSlider.setPaintTicks(true);

@@ -8,7 +8,7 @@ public class Domainview extends JPanel {
 
 	Background background = new Background();
 	MoveableGlass glassbehind = new MoveableGlass();
-	OpticalZoom glassinfront = new OpticalZoom();
+	OpticalZoom glassinfront = new OpticalZoom(background);
 
 	public Domainview() {
 		setLayout(null);
